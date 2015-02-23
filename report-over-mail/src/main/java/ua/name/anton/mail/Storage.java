@@ -12,7 +12,9 @@ public class Storage {
 	static {
 		REPORTS.put(1, "ua.com.ucslombard.commonmonthreport.CommonMonthReport");
 		REPORTS.put(2, "ua.com.ucslombard.thechportfoliodetailreport.TechDetailReport");
+		REPORTS.put(3, "ua.com.ucslombard.techselfbuyoutreport.TechSelfBuyoutReport");
 		REPORTS.put(999, "ua.com.ucslombard.empty.EmptyReport");
+
 	}
 	
 	public static Report getReport(Integer key) {

@@ -39,7 +39,7 @@ public class RequestUtil {
 		}
         try {
         	log.info("Connect to the imap server...");
-			store.connect("imap.yandex.com", "noreply@***-lombard.com.ua", "*******");
+			store.connect("imap.yandex.com", "noreply@***-lombard.com.ua", "********");
 			Folder inbox = store.getFolder("requests");
 	        inbox.open(Folder.READ_WRITE);
 	        
@@ -98,6 +98,8 @@ public class RequestUtil {
 			
 			if (args.length > 1) {
 				args = Arrays.copyOfRange(args, 1, args.length);
+			} else {
+				args = new String[0];
 			}
 		} else {
 			result = false;

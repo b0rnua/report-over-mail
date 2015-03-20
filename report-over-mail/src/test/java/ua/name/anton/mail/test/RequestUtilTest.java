@@ -18,13 +18,13 @@ public class RequestUtilTest {
 		Request except = new Request();
 		except.setFrom("");
 		except.setRequestDate(null);
-		except.setArgs(new String[]{"01022015", "all"});
-		except.setReportType(1);
+		except.setArgs(new String[]{});
+		except.setReportType(2);
 		
 		Request result = new Request();
 		result.setFrom("");
 		result.setRequestDate(null);
-		RequestUtil.getSubject("1 01022015 all", result);
+		RequestUtil.getSubject("2", result);
 		
 		assertEquals(except, result);
 		

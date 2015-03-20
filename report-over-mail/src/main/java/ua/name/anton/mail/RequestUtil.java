@@ -39,7 +39,7 @@ public class RequestUtil {
 		}
         try {
         	log.info("Connect to the imap server...");
-			store.connect("imap.yandex.com", "noreply@***-lombard.com.ua", "********");
+			store.connect("imap.yandex.com", "noreply@ucs-lombard.com.ua", "791382465noReply");
 			Folder inbox = store.getFolder("requests");
 	        inbox.open(Folder.READ_WRITE);
 	        
@@ -65,8 +65,8 @@ public class RequestUtil {
 		} catch (MessagingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			log.info(e.getMessage());
-			log.info("End with error!");
+			log.error(e.getStackTrace());
+			log.error("End with error!");
 		} finally {
 			if (store.isConnected()) {
 				try {

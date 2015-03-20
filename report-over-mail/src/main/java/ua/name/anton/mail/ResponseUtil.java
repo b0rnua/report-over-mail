@@ -38,7 +38,7 @@ public class ResponseUtil {
 				props,
 				new javax.mail.Authenticator() {
 					protected PasswordAuthentication getPasswordAuthentication() {
-						return new PasswordAuthentication("noreply@***-lombard.com.ua", "*******");
+						return new PasswordAuthentication("noreply@ucs-lombard.com.ua", "791382465noReply");
 					}
 				}
 				);

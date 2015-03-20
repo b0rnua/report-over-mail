@@ -8,10 +8,11 @@ import ua.name.anton.mail.Request;
 import ua.name.anton.mail.Response;
 import ua.name.anton.mail.ResponseUtil;
 import ua.name.anton.mail.Storage;
+import ua.name.anton.mail.util.Memory;
 import ua.name.avetrov.report.Report;
 
 public class DoResponse implements Runnable {
-
+	
 	private Report report;
 	private Request request;
 	
@@ -27,8 +28,8 @@ public class DoResponse implements Runnable {
 	@Override
 	public void run() {
 		Response response = new Response();
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();	
-		baos = report.doReport(request.getArgs());		
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		baos = report.doReport(request.getArgs());
 		response.setAttache(baos.toByteArray());
 		response.setAttMimeType(report.getAttMimeType());
 		response.setAttName(report.getAttName());
